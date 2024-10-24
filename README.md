@@ -1,33 +1,22 @@
-# TASK-NAME
-
-This is the template for tasks. These repos are the starting points and instructions for students to explore a concept.
+# JS-Functions-Part1
+ 
 
 ## Instructions
-- Fork and clone [this repository](https://github.com/JoinCODED/{REPO_NAME}) to your `Development` folder.
 
-## Objective and end result
-- Write the objective of the task.
-- If there are any images, make sure you resize them to around 880px maximum width. **Don't add big images**
-
-![screenshot](https://tenor.com/xNjE.gif)
-
-
-### 🍋 The basic challenge title
-
-- Step 1
-- Step 2
-- Step 3
-
-
-### 🤼‍♂️ The hard challenge title
-
-- Step 1
-- Step 2
-- Step 3
-
-
-### 🌶 The Extreme challenge title 
-
-- Step 1
-- Step 2
-- Step 3
+- Fork and clone [this repository](https://github.com/JoinCODED/TASK-JS-Functions-Part1) to your `Development` folder.
+	- ````bash 
+		git clone git@github.com:JoinCODED/TASK-JS-Functions-Part1.git 
+		````
+### Running The Tests
+- Install all the requirements:
+	1. Navigate to the project root (you'll find a file called `package.json` there).
+	2. Install the requirments with the following command:
+		```` bash 
+			npm install 
+		````
+  3. Run the tests
+	  ```` bash
+		  npm test
+		  ```
+	4. This command will run the testing file and test your code to make sure it has all the required features.
+	5. You know you're done when your code passes all the tests! 
