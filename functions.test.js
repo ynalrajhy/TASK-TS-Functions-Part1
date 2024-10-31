@@ -1,9 +1,12 @@
+const { faker } = require("@faker-js/faker");
+
 const { printName, printAge, printHello, printMax } = require("./functions");
 
-// Testing PrintName
-test("Testing Print Name Function", () => {
+test("printName Function", () => {
   const spy = jest.spyOn(console, "log");
-  const names = ["Aya", "Moudhi", "Abullah", "Ali"];
+  const names = Array(10)
+    .fill(0)
+    .map((_) => faker.person.firstName());
 
   names.forEach((name) => {
     printName(name);
