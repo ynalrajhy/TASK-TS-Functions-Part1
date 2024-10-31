@@ -4,7 +4,7 @@
   "description": "This is the template for tasks. These repos are the starting points and instructions for students to explore a concept.",
   "main": "functions.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watch"
   },
   "keywords": [],
   "author": "",
