@@ -2,7 +2,7 @@
   "name": "task-js-functions-part1",
   "version": "1.0.0",
   "description": "This is the template for tasks. These repos are the starting points and instructions for students to explore a concept.",
-  "main": "index.js",
+  "main": "functions.js",
   "scripts": {
     "test": "jest"
   },

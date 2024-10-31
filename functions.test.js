@@ -1,4 +1,4 @@
-const { printName, printAge, printHello, printMax } = require("./index");
+const { printName, printAge, printHello, printMax } = require("./functions");
 
 // Testing PrintName
 test("Testing Print Name Function", () => {
