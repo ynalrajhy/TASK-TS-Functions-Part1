@@ -2,11 +2,11 @@ const { faker } = require("@faker-js/faker");
 
 const { printName, printAge, printHello, printMax } = require("./functions");
 
-test("printName Function", () => {
+test("printName function", () => {
   const spy = jest.spyOn(console, "log");
   const names = Array(10)
     .fill(0)
-    .map((_) => faker.person.firstName());
+    .map(() => faker.person.firstName());
 
   names.forEach((name) => {
     printName(name);
@@ -16,48 +16,55 @@ test("printName Function", () => {
   spy.mockRestore();
 });
 
-// Testing Print Age Function - Input is valid year of birth
-test("Testing Print Age", () => {
+test("printAge function", () => {
   const spy = jest.spyOn(console, "log");
-  const yearOfBirths = [1996, 1998, 2000, 2002, 2004];
+  const birthYears = Array(10)
+    .fill(0)
+    .map(() =>
+      new Date(
+        faker.date.birthdate({ mode: "age", min: 5, max: 100 })
+      ).getFullYear()
+    );
 
-  yearOfBirths.forEach((YOB) => {
+  birthYears.forEach((YOB) => {
     printAge(YOB);
-    expect(spy).toHaveBeenCalledWith(2024 - YOB);
+    expect(spy).toHaveBeenCalledWith(new Date().getFullYear() - YOB);
   });
 });
 
-// Testing Print Hello Function - Input is valid name and language
-test("Testing Print Hello Function", () => {
+test("printHello function", () => {
   const spy = jest.spyOn(console, "log");
-  const names = ["Aya", "Moudhi", "Abullah", "Ali"];
-  const languages = ["en", "es", "fr", "tr"];
-  const greetings = ["Hello", "Hola", "Bonjour", "Merhaba"];
+  const names = Array(10)
+    .fill(0)
+    .map(() => faker.person.firstName());
+  const languages = {
+    en: "Hello",
+    es: "Hola",
+    fr: "Bonjour",
+    tr: "Merhaba",
+  };
 
   names.forEach((name) => {
-    languages.forEach((language, index) => {
+    Object.keys(languages).forEach((language) => {
       printHello(name, language);
-      expect(spy).toHaveBeenCalledWith(`${greetings[index]} ${name}`);
+      expect(spy).toHaveBeenCalledWith(`${languages[language]} ${name}`);
     });
   });
 
   spy.mockRestore();
 });
 
-// Testing Print Max Function - Input is valid numbers
-
-test("Testing Print Max Function", () => {
+test("printMax Function", () => {
   const spy = jest.spyOn(console, "log");
-  const numbers = [
-    [1, 2],
-    [3, 4],
-    [5, 6],
-    [7, 8],
-    [9, 10],
-  ];
+  const numbers = Array(10)
+    .fill(0)
+    .map(() => [
+      faker.number.int({ min: 0, max: 100 }),
+      faker.number.int({ min: 0, max: 100 }),
+    ]);
 
   numbers.forEach((nums) => {
-    printMax(nums[0], nums[1]);
+    printMax(...nums);
     expect(spy).toHaveBeenCalledWith(Math.max(...nums));
   });
 
