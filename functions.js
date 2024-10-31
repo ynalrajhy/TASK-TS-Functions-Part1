@@ -31,7 +31,8 @@
  * - should print out the bigger number
  */
 
-//TODO: Uncomment this before you push your solution!
+// TODO: Uncomment these functions as you work on them
+// Make sure they're all uncommented before you push your solution!
 module.exports = {
   // printName,
   // printAge,
