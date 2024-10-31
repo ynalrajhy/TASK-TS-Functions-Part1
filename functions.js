@@ -1,7 +1,8 @@
 /**
  * Task 1:
  * Create a function named `printName`
- * - that just prints your name on the screen
+ * - take a name as a parameter
+ * - that just prints that name on the screen
  */
 
 /**
@@ -31,9 +32,9 @@
  */
 
 //TODO: Uncomment this before you push your solution!
-/*module.exports = {
-  printName,
-  printAge,
-  printHello,
-  printMax,
-};*/
+module.exports = {
+  // printName,
+  // printAge,
+  // printHello,
+  // printMax,
+};
