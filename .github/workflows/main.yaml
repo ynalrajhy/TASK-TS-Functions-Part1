@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: "20.x"
       - run: npm install
-      - run: npm ghworkflowtest -- --ci --reporters=default --reporters=jest-junit
+      - run: npm run ghworkflowtest -- --ci --reporters=default --reporters=jest-junit
       - name: update Airtable
         if: always ()
         run: node ./.scripts/main.js JS ${{github.actor}} https://github.com/${{github.repository}}
