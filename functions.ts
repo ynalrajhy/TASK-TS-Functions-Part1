@@ -4,6 +4,7 @@
  * - take a name as a parameter
  * - that just prints that name on the screen
  */
+function printName() {}
 
 /**
  * Task 2:
@@ -12,6 +13,7 @@
  * - and prints the age on the screen.
  * - Age = current year - birth
  */
+function printAge() {}
 
 /**
  * Task 3:
@@ -23,6 +25,7 @@
  * -- fr: it should print `Bonjour NAME`
  * -- tr: it should print `Merhaba NAME`
  */
+function printHello() {}
 
 /**
  * Task 4:
@@ -30,12 +33,7 @@
  * - that takes 2 parameters as numbers
  * - should print out the bigger number
  */
+function printMax() {}
 
-// TODO: Uncomment these functions as you work on them
-// Make sure they're all uncommented before you push your solution!
-module.exports = {
-  // printName,
-  // printAge,
-  // printHello,
-  // printMax,
-};
+// don't touch me bro!
+export { printName, printAge, printHello, printMax };

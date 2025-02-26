@@ -1,6 +1,6 @@
-const { faker } = require("@faker-js/faker");
+import { faker } from "@faker-js/faker";
 
-const { printName, printAge, printHello, printMax } = require("./functions");
+import { printAge, printHello, printMax, printName } from "./functions";
 
 test("printName function", () => {
   const spy = jest.spyOn(console, "log");

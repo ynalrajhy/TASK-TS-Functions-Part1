@@ -1,0 +1,46 @@
+# .github/workflows/main.yml
+name: Run Jest Tests
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20.x"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm run ghworkflowtest -- --ci
+
+      - name: Upload Test Report
+        uses: actions/upload-artifact@v4
+        if: success() || failure()
+        with:
+          name: junit-report
+          path: reports/junit/junit.xml
+
+      - name: Publish Test Report
+        uses: dorny/test-reporter@v1
+        if: success() || failure()
+        with:
+          name: Test Report # Name of the check run which will be created
+          path: reports/junit/junit.xml # Path to test results
+          reporter: jest-junit # Format of test results
+
+      - name: update Airtable
+        if: always()
+        run: node ./.scripts/main.js TS ${{github.actor}} https://github.com/${{github.repository}}

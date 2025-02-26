@@ -7,7 +7,7 @@ const xml2js = require("xml2js");
 const TOPIC = argv[2];
 const STUDENT_GITHUB = argv[3];
 const STUDENT_REPO = argv[4];
-const JEST_REPORT_PATH = "./junit.xml";
+const JEST_REPORT_PATH = "./reports/junit/junit.xml";
 
 // Airtable API functions
 const airtableApiServer = axios.create({
