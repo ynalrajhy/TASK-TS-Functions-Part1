@@ -1,39 +1,71 @@
 /**
  * Task 1:
  * Create a function named `printName`
- * - take a name as a parameter
- * - that just prints that name on the screen
+ * - Accepts a "name" parameter of type "string"
+ * - that just prints (logs) that "name" on the screen
  */
-function printName() {}
+function printName(name: string): void {
+  // write your code here
+}
 
 /**
  * Task 2:
  * Create a function named `printAge`
- * - that takes a birth year as a parameter,
- * - and prints the age on the screen.
+ * - Accepts a "birthYear" parameter of type "number"
+ * - and prints (logs) the age on the screen
  * - Age = current year - birth
  */
-function printAge() {}
+function printAge(birthYear: number): number {
+  // write your code here
+
+  return -1; // replace -1 to what you see is fit
+}
+
+// example:
+printAge(2000); // => 2025 (2025 - 2000)
 
 /**
  * Task 3:
  * Create a function named `printHello`
- * - that takes 2 parameters, name, and language
+ * - that takes 2 parameters (name and language)
+ * - Accepts a "name" parameter of type "string"
+ * - Accepts a "language" parameter of type "LanguageType"
  * - language can be passed in different values, here are the accepted values:-
  * -- en: it should print `Hello NAME`
  * -- es: it should print `Hola NAME`
  * -- fr: it should print `Bonjour NAME`
  * -- tr: it should print `Merhaba NAME`
  */
-function printHello() {}
+
+// don't make any changes to LanguageType
+type LanguageType = "en" | "es" | "fr" | "tr";
+
+function printHello(name: string, language: LanguageType): string {
+  // write your code here
+
+  return ""; // replace the empty string with what you see is fit
+}
+
+// example:
+printHello("Aziz", "es"); // => "Hola Aziz"
+printHello("Aziz", "fr"); // => "Bonjour Aziz"
 
 /**
  * Task 4:
  * Create a function named `printMax`
- * - that takes 2 parameters as numbers
+ * - that takes 2 parameters (x and y)
+ * - Accepts a "x" parameter of type "number"
+ * - Accepts a "y" parameter of type "number"
  * - should print out the bigger number
  */
-function printMax() {}
+function printMax(x: number, y: number): number {
+  // write your code here
+
+  return -1; // replace -1 to what you see is fit
+}
+
+// example:
+printMax(4, 7); // => 7
 
 // don't touch me bro!
-export { printName, printAge, printHello, printMax };
+export { printName, printAge, printHello, printMax, LanguageType };
