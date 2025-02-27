@@ -5,7 +5,7 @@ import {
   printHello,
   printMax,
   printName,
-  languageType,
+  LanguageType,
 } from "./functions";
 
 describe("functions", () => {
@@ -50,7 +50,7 @@ describe("functions", () => {
         .fill(0)
         .map(() => faker.person.firstName());
 
-      const languages: Record<languageType, string> = {
+      const languages: Record<LanguageType, string> = {
         en: "Hello",
         es: "Hola",
         fr: "Bonjour",
@@ -58,7 +58,7 @@ describe("functions", () => {
       };
 
       names.forEach((name) => {
-        (Object.keys(languages) as languageType[]).forEach((language) => {
+        (Object.keys(languages) as LanguageType[]).forEach((language) => {
           expect(printHello(name, language)).toBe(
             `${languages[language]} ${name}`
           );

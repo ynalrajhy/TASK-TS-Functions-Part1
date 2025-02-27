@@ -29,7 +29,7 @@ printAge(2000); // => 2025 (2025 - 2000)
  * Create a function named `printHello`
  * - that takes 2 parameters (name and language)
  * - Accepts a "name" parameter of type "string"
- * - Accepts a "language" parameter of type "languageType"
+ * - Accepts a "language" parameter of type "LanguageType"
  * - language can be passed in different values, here are the accepted values:-
  * -- en: it should print `Hello NAME`
  * -- es: it should print `Hola NAME`
@@ -37,10 +37,10 @@ printAge(2000); // => 2025 (2025 - 2000)
  * -- tr: it should print `Merhaba NAME`
  */
 
-// don't make any changes to languageType
-type languageType = "en" | "es" | "fr" | "tr";
+// don't make any changes to LanguageType
+type LanguageType = "en" | "es" | "fr" | "tr";
 
-function printHello(name: string, language: languageType): string {
+function printHello(name: string, language: LanguageType): string {
   // write your code here
 
   return ""; // replace the empty string with what you see is fit
@@ -68,4 +68,4 @@ function printMax(x: number, y: number): number {
 printMax(4, 7); // => 7
 
 // don't touch me bro!
-export { printName, printAge, printHello, printMax, languageType };
+export { printName, printAge, printHello, printMax, LanguageType };
