@@ -1,6 +1,12 @@
 import { faker } from "@faker-js/faker";
 
-import { printAge, printHello, printMax, printName } from "./functions";
+import {
+  printAge,
+  printHello,
+  printMax,
+  printName,
+  languageType,
+} from "./functions";
 
 describe("functions", () => {
   describe("printName", () => {
@@ -43,7 +49,8 @@ describe("functions", () => {
       const names = Array(10)
         .fill(0)
         .map(() => faker.person.firstName());
-      const languages = {
+
+      const languages: Record<languageType, string> = {
         en: "Hello",
         es: "Hola",
         fr: "Bonjour",
@@ -51,9 +58,10 @@ describe("functions", () => {
       };
 
       names.forEach((name) => {
-        Object.keys(languages).forEach((language) => {
-          printHello(name, language);
-          expect(spy).toHaveBeenCalledWith(`${languages[language]} ${name}`);
+        (Object.keys(languages) as languageType[]).forEach((language) => {
+          expect(printHello(name, language)).toBe(
+            `${languages[language]} ${name}`
+          );
         });
       });
 
