@@ -15,7 +15,12 @@
         "jest-junit",
         {
           "outputDirectory": "./reports/junit",
-          "outputName": "junit.xml"
+          "outputName": "junit.xml",
+          "ancestorSeparator": " › ",
+          "uniqueOutputName": "false",
+          "classNameTemplate": "{classname}",
+          "titleTemplate": "{title}",
+          "addFileAttribute": "true"
         }
       ]
     ]
