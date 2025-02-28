@@ -1,12 +1,12 @@
 import { faker } from "@faker-js/faker";
 
 import {
+  LanguageType,
   printAge,
   printHello,
   printMax,
   printName,
-  LanguageType,
-} from "./functions";
+} from "../functions";
 
 describe("functions", () => {
   describe("printName", () => {
