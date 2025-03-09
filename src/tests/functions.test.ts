@@ -59,9 +59,8 @@ describe("functions", () => {
 
       names.forEach((name) => {
         (Object.keys(languages) as LanguageType[]).forEach((language) => {
-          expect(printHello(name, language)).toBe(
-            `${languages[language]} ${name}`
-          );
+          printHello(name, language);
+          expect(spy).toHaveBeenCalledWith(`${languages[language]} ${name}`);
         });
       });
 
