@@ -15,10 +15,8 @@ function printName(name: string): void {
  * - and prints (logs) the age on the screen
  * - Age = current year - birth
  */
-function printAge(birthYear: number): number {
+function printAge(birthYear: number): void {
   // write your code here
-
-  return -1; // replace -1 to what you see is fit
 }
 
 // example:
@@ -40,10 +38,8 @@ printAge(2000); // => 2025 (2025 - 2000)
 // don't make any changes to LanguageType
 type LanguageType = "en" | "es" | "fr" | "tr";
 
-function printHello(name: string, language: LanguageType): string {
+function printHello(name: string, language: LanguageType): void {
   // write your code here
-
-  return ""; // replace the empty string with what you see is fit
 }
 
 // example:
@@ -58,10 +54,8 @@ printHello("Aziz", "fr"); // => "Bonjour Aziz"
  * - Accepts a "y" parameter of type "number"
  * - should print out the bigger number
  */
-function printMax(x: number, y: number): number {
+function printMax(x: number, y: number) {
   // write your code here
-
-  return -1; // replace -1 to what you see is fit
 }
 
 // example:
